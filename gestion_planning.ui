@@ -1,0 +1,1965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>gestion_planning</class>
+ <widget class="QMainWindow" name="gestion_planning">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1331</width>
+    <height>834</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>gestion_planning</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	color:#000;
+border:none;
+}
+#frame,#frame_2,#frame_3,#frame_5{
+	background-color:#28B4E8;
+	border-radius:20px;
+}
+#frame_6,#frame_8,#headerFrame1_4{
+	background-color:#28B4E8;
+	border-radius:20px;
+}
+#abonnement_up,#abonnement_down{
+	background-color:transparent
+}
+#Ajouter_abonnement,#Chercher_abonnement,#Modifier_abonnement{
+	background-color:transparent
+}
+#Effacer_abonnement{
+	background-color:transparent
+}
+#M1_abonnement,#M2_abonnement,#M3_abonnement,#M4_abonnement{
+	background-color:transparent
+}
+#leftMenuA{
+	background-color:#28B4E8;
+	border-radius:20px;
+}
+#pushButton_31A,#pushButton_41A,#pushButton_51A,#pushButton_61A
+{
+	background-color:transparent;
+}
+#pushButton_71A,#pushButton_81A,#pushButton_91A,#pushButton_61A_8
+{
+	background-color:transparent;
+}
+#pushButton_61A_9,#pushButton_61A_10,#pushButton_61A_11
+{
+	background-color:transparent;
+}
+#pushButton_41A{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+#headerFrame1{
+	background-color: #fefeff;
+	border-radius:20px;
+}
+#searchFrame1{
+	border-radius: 10px;
+	border: 2px solid #28B4E8
+}
+QLineEdit1{
+	background:transparent;
+}
+#widget{
+	background-color: #fefeff;
+	border-radius:20px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>1321</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QWidget" name="leftMenuA" native="true">
+      <property name="geometry">
+       <rect>
+        <x>121</x>
+        <y>-10</y>
+        <width>165</width>
+        <height>731</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_151A_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_31A_2">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:0px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Home</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/assets/icons/white/home.svg</normaloff>:/assets/icons/white/home.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_41A_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:30px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Abonnements</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/assets/icons/white/package.svg</normaloff>:/assets/icons/white/package.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_51A_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:0px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Adherants</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/assets/icons/white/users.svg</normaloff>:/assets/icons/white/users.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_61A_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:0px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Personnels</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/assets/icons/white/users.svg</normaloff>:/assets/icons/white/users.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_71A_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:0px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Activitès</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/assets/icons/white/activity.svg</normaloff>:/assets/icons/white/activity.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_81A_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:0px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Planning</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/database.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/database.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_91A_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:0px;
+}
+	</string>
+            </property>
+            <property name="text">
+             <string>Equippements</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/assets/icons/white/anchor.svg</normaloff>:/assets/icons/white/anchor.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget1_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>90</y>
+        <width>826</width>
+        <height>826</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color=white;
+</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="mainMenu1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>-10</y>
+        <width>851</width>
+        <height>731</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="headerFrame1_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>851</width>
+         <height>78</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="headerFrame1_4" native="true">
+          <property name="styleSheet">
+           <string notr="true">QFrame:hover {
+background-color: white;
+    border-radius: 25px;
+	
+
+}
+</string>
+          </property>
+          <widget class="QWidget" name="widget_22" native="true">
+           <property name="geometry">
+            <rect>
+             <x>321</x>
+             <y>0</y>
+             <width>208</width>
+             <height>78</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item alignment="Qt::AlignTop">
+             <widget class="QFrame" name="searchFrame1_2">
+              <property name="minimumSize">
+               <size>
+                <width>160</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame:hover {
+    border-radius: 25px;
+}
+</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <widget class="QLabel" name="label_22">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/search.svg</pixmap>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit1_2">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 10px;
+border: 2px solid 
+
+</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>search</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="widget_32" native="true">
+           <property name="geometry">
+            <rect>
+             <x>790</x>
+             <y>10</y>
+             <width>58</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item alignment="Qt::AlignRight">
+             <widget class="QPushButton" name="accountBtn1_2">
+              <property name="styleSheet">
+               <string notr="true">QPushButton:hover{
+	background-color:white;
+		text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-top-left-radius:30px;
+}
+	</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/user.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/user.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QLabel" name="appHeader1_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>181</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>:/new/prefix1/assets-20240304T215810Z-001/assets/images/logoo (1).png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>89</y>
+         <width>831</width>
+         <height>641</height>
+        </rect>
+       </property>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>9</y>
+          <width>221</width>
+          <height>561</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="MATRICULE">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10px;
+border: 2px solid #28B4E8
+</string>
+           </property>
+           <property name="text">
+            <string>5241</string>
+           </property>
+           <property name="placeholderText">
+            <string>MATRICULE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="IDACTIVITE">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10px;
+border: 2px solid #28B4E8
+</string>
+           </property>
+           <property name="text">
+            <string>5253</string>
+           </property>
+           <property name="placeholderText">
+            <string>IDACTIVITE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="IDEMPLOYE">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10px;
+border: 2px solid #28B4E8
+</string>
+           </property>
+           <property name="text">
+            <string>645</string>
+           </property>
+           <property name="placeholderText">
+            <string>PERSONNEL</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="STATUS">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10px;
+border: 2px solid #28B4E8</string>
+           </property>
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>REFUSER</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CONFIRMER</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="DATE"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Ajouter_planning_2">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+           </property>
+           <property name="text">
+            <string>Ajouter</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/plus.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/plus.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QFrame" name="frame_6">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>9</y>
+          <width>561</width>
+          <height>561</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="Chercher_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>464</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Afficher</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/search.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Modifier_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>205</x>
+           <y>464</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/refresh-ccw.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/refresh-ccw.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Effacer_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>464</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Effacer</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/x.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/x.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_7">
+         <property name="geometry">
+          <rect>
+           <x>223</x>
+           <y>500</y>
+           <width>105</width>
+           <height>57</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QPushButton" name="planning_up_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/arrow-left.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/arrow-left.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="planning_down_2">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/arrow-right.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/arrow-right.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="call">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>510</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Calendrier</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/x.svg</normaloff>:/new/prefix1/assets-20240304T215810Z-001/assets/icons/white/x.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnWeather">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>520</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Metéo</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>541</width>
+           <height>461</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>List</string>
+          </attribute>
+          <widget class="QTableView" name="affiche_tab">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>541</width>
+             <height>431</height>
+            </rect>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Historique</string>
+          </attribute>
+          <widget class="QTableView" name="affiche_tab_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>541</width>
+             <height>431</height>
+            </rect>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>580</y>
+          <width>801</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="M1_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Recherche</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="M2_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>10</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Tri status</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="M3_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>10</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Pdf</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="M4_planning_2">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>10</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Statistiques</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="M2_planning_3">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>10</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Tri date crois</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="M2_planning_4">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>10</y>
+           <width>141</width>
+           <height>33</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+	background-color: white;
+	text-align:left;
+	border-top-left-radius:20px;
+}
+QPushButton:pressed{
+	background-color: white;
+	color:grey;
+	text-align:left;
+	border-radius:0px;
+}
+
+	</string>
+         </property>
+         <property name="text">
+          <string>Tri date dec</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/assets/icons/white/search.svg</normaloff>:/assets/icons/white/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QCalendarWidget" name="calend">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>0</y>
+        <width>671</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>213</red>
+            <green>234</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>149</red>
+            <green>202</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>42</red>
+            <green>85</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Mid">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>56</red>
+            <green>113</green>
+            <blue>170</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="BrightText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Shadow">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="AlternateBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>170</red>
+            <green>212</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>220</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="128">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>213</red>
+            <green>234</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>149</red>
+            <green>202</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>42</red>
+            <green>85</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Mid">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>56</red>
+            <green>113</green>
+            <blue>170</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="BrightText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Shadow">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="AlternateBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>170</red>
+            <green>212</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>220</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="128">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>213</red>
+            <green>234</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>149</red>
+            <green>202</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>42</red>
+            <green>85</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Mid">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>56</red>
+            <green>113</green>
+            <blue>170</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="BrightText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>105</green>
+            <blue>105</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Shadow">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="AlternateBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>85</red>
+            <green>170</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>220</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="128">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCalendarWidget {
+ color: rgb(255, 105, 105);
+    background-color: rgb(255, 105, 105);
+}
+QCalendarWidget QMenu
+{
+	background-color: rgb(255, 105, 105);
+color: rgb(255, 105, 105);
+}
+QCalendarWidget QToolButton {
+/*text color*/
+    color: rgb(20, 30, 70); 
+/*background color*/
+	background-color: rgb(255, 105, 105);
+}
+
+QCalendarWidget QToolButton:hover {
+    background-color: rgb(255, 105, 105);
+    color: rgb(255, 105, 105); 
+}
+
+QCalendarWidget QToolButton:selected {
+    background-color: rgb(255, 105, 105);
+    color: rgb(255, 105, 105); 
+}
+QCalendarWidget QAbstractItemView {
+    selection-background-color: rgb(255, 105, 105); /* Set the color for the selection bar */
+color: rgb(20, 30, 70);
+}
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: rgb(255, 105, 105);
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="ttw">
+      <property name="geometry">
+       <rect>
+        <x>425</x>
+        <y>520</y>
+        <width>601</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>520</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>tab/calen</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1331</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
